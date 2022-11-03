@@ -1,0 +1,38 @@
+basePath: /
+definitions:
+  main.todo:
+    properties:
+      id:
+        type: string
+      task:
+        type: string
+    type: object
+host: localhost:3333
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server todo server. You can visit the GitHub repository
+    at https://github.com/LordGhostX/swag-gin-demo
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  title: Go + Chi Todo API
+  version: "1.0"
+paths:
+  /todo:
+    get:
+      operationId: get-all-todos
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.todo'
+      summary: get all items in the todo list
+swagger: "2.0"
+
+schemes:
+  - http
